@@ -1,0 +1,1 @@
+web: gunicorn quiz_final.wsgi --log-file -
