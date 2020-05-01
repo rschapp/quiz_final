@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Quiz List</h1>
+  {% if quiz_list %}
+  <ul>
+    {% for quiz in quiz_list %}
+      <li>
+        <a href="/quiz/quizzes/{{quiz.pk}}">{{ quiz.name }}</a> ({{quiz.description}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no quizzes in the library.</p>
+  {% endif %}       
+{% endblock %}
